@@ -1,7 +1,7 @@
-# MyMVC Template
+# MVC Template
 Yet another template for iOS development
 
-Has two different but related templates. **MyMVCScene.xctemplate** and **MyMVCBusinessModel.xctemplate**
+Has two different but related templates. **MVCScene.xctemplate** and **MVCBusinessModel.xctemplate**
 
 You should also use **BaseProtocols** in your project.
 
