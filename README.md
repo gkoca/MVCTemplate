@@ -3,7 +3,7 @@ Yet another template for iOS development
 
 Has two different but related templates. **MVCScene.xctemplate** and **MVCBusinessModel.xctemplate**
 
-You should also use **BaseProtocols** in your project.
+You must also use **BaseProtocols** in your project.
 
 ## Architecture
 ![diagram](Diagram.png)
