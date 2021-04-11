@@ -31,14 +31,17 @@ final class ___VARIABLE_sceneName___PresentationModel: BasePresentationModel {
 	/// if you don't have loading process, you may send ´viewController´ directly via ´completion´
 	func loadScene(completion: @escaping ((___VARIABLE_sceneName___ViewController) -> Void)) {
 		let storyBoard = UIStoryboard(name: "___VARIABLE_sceneName___", bundle: nil)
-		let viewController: ___VARIABLE_sceneName___ViewController = storyBoard.instantiateViewController()
-		let router = ___VARIABLE_sceneName___Router(viewController: viewController)
+		var viewController: ___VARIABLE_sceneName___ViewController? = storyBoard.instantiateViewController()
+		let router = ___VARIABLE_sceneName___Router(viewController: viewController!)
 		self.viewController = viewController
 		self.router = router
-		viewController.presentationModel = self
-		viewController.loadViewIfNeeded()
+		viewController?.presentationModel = self
+		viewController?.loadViewIfNeeded()
 		sceneLoadingHandler = {
-			completion(viewController)
+			if let viewController = viewController {
+				completion(viewController)
+			}
+			viewController = nil
 		}
 		// start loading process here
 	} 
